@@ -33,7 +33,7 @@ public class MysqlGenerator {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         gc.setOutputDir(projectPath + "/src/main/java");
-        gc.setAuthor("yuan");
+        gc.setAuthor("wangjiang");
         gc.setOpen(true);
         //service 命名方式
         gc.setServiceName("%sService");
@@ -54,10 +54,10 @@ public class MysqlGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/demo_druid?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC");
+        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/vhr?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("root");
+        dsc.setPassword("wj123456");
         mpg.setDataSource(dsc);
 
         // 包配置
@@ -109,7 +109,7 @@ public class MysqlGenerator {
         strategy.setEntityLombokModel(true);
         // 设置逻辑删除键
         strategy.setLogicDeleteFieldName("deleted");
-        strategy.setInclude("mp_user");
+        strategy.setInclude("employee");
         //strategy.setSuperEntityColumns("id");
         //驼峰转连字符
         strategy.setControllerMappingHyphenStyle(true);
